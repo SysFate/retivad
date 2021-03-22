@@ -2,19 +2,22 @@
 
 ## Dependencies
 
-```conda create --name retivade paramiko medaka minimap2 regex bwa samtools bedtools biopython bedops matplotlib
+```
+conda create --name retivade paramiko medaka minimap2 regex bwa samtools bedtools biopython bedops matplotlib
 conda activate retivade
 ```
 
 ## How run
 
-```require arguments:
+```
+require arguments:
   -5 barcode5, --barcode5 barcode5
                         File with the barcode 5' list. ID Sequence (default:None)
   -3 barcode3, --barcode3 barcode3
                         File with the barcode 3' list. ID Sequence (default:None)
   ```
-```optional arguments:
+```
+optional arguments:
   -h, --help               show this help message and exit
   -f file, --file file     File(s) you want annalyse separate with commat (default: )
   --folder folder          Folder who contain fastq to annalyse (default: None)
@@ -50,7 +53,8 @@ conda activate retivade
   ```
 
 ### Example
-```python3 selectSequencesWithBarcordesLittle.py -c 10 -5 barcode5.csv -3 barcode3.csv -g genome/covid.fa --folder /data/covid12/no_sample/20210317_1617_MC-110352_0_FAP14908_252839db/fastq_pass -i 30 -I 10000 -l 70 -L 10000 -o /home/Sysfate/Team_projects/Covid19/covidInRealTime --ext config.ini > covid.log 2>&1 &
+```
+python3 selectSequencesWithBarcordesLittle.py -c 10 -5 barcode5.csv -3 barcode3.csv -g genome/covid.fa --folder /data/covid12/no_sample/20210317_1617_MC-110352_0_FAP14908_252839db/fastq_pass -i 30 -I 10000 -l 70 -L 10000 -o /home/Sysfate/Team_projects/Covid19/covidInRealTime --ext config.ini > covid.log 2>&1 &
 ```
 
 ## Informations / Authors
