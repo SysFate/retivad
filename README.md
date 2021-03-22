@@ -45,9 +45,9 @@ optional arguments:
   --alignerSpecialsParam alignerSpecialsParam
                            Specials parameters for the aligner (default: None)
   --traceseq traceseq      Sequences you want track to check the method (default: None)
-  --ext ext                Configuration for the ssh. Use it if your file are not in the computer.
+  --ext ext                Path to the configuration for the ssh. Use it if your files are not in the computer.
                            This method are only in realtime annalyse. (default: None)
-  --timecheck timecheck    A realtime annalyse, you can setup the time between each check in the folder (default: None)
+  --timecheck timecheck    In realtime annalyse, you can setup the time between each check in the folder (default: 10)
   --dev                    Keep all temporar datas (default: False)
   ```
 
