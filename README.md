@@ -21,7 +21,6 @@ optional arguments:
   -h, --help               show this help message and exit
   -f file, --file file     File(s) you want annalyse separate with commat (default: )
   --folder folder          Folder who contain fastq to annalyse (default: None)
-
   -c core, --core core     number of core the software can use (default: 1)
   -o outdir, --out outdir  Folder where send files (default: .)
   -G guibson, --guibsonE guibson
