@@ -12,9 +12,11 @@ conda activate retivade
 ```
 require arguments:
   -5 barcode5, --barcode5 barcode5
-                        File with the barcode 5' list. ID Sequence (default:None)
+                           File with the barcode 5' list. ID Sequence
   -3 barcode3, --barcode3 barcode3
-                        File with the barcode 3' list. ID Sequence (default:None)
+                           File with the barcode 3' list. ID Sequence
+  -g genome, --genome genome
+                           Aligner genome index path
   ```
 ```
 optional arguments:
@@ -42,8 +44,6 @@ optional arguments:
                            Aligner path. By default we use the name (default:None)
   --alignerSpecialsParam alignerSpecialsParam
                            Specials parameters for the aligner (default: None)
-  -g genome, --genome genome
-                           Aligner genome index path (default: None)
   --traceseq traceseq      Sequences you want track to check the method (default: None)
   --ext ext                Configuration for the ssh. Use it if your file are not in the computer.
                            This method are only in realtime annalyse. (default: None)
