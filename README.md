@@ -53,7 +53,7 @@ optional arguments:
 
 ### Example
 Take files from the template folder:
-- Barcodes datas files: barcode5.tsv (RT-PCR barcodes) and barcode3.tsv (PCR Barcodes).
+- Barcodes datas files: barcode5.tsv (cDNA barcodes) and barcode3.tsv (PCR Barcodes).
 - The config file is used when your files are not in your computer.
 - The genome of your interest pathogene(s). Here we select the covid genome.
 
