@@ -52,9 +52,17 @@ optional arguments:
   ```
 
 ### Example
+Take files from the template folder:
+- Barcodes datas files: barcode5.tsv (RT-PCR barcodes) and barcode3.tsv (PCR Barcodes).
+- The config file is used when your files are not in your computer.
+- The genome of your interest pathogene(s). Here we select the covid genome.
+
+We want in this example, diagnostic patient with covid.
 ```
-python3 selectSequencesWithBarcordesLittle.py -c 10 -5 barcode5.csv -3 barcode3.csv -g genome/covid.fa --folder /data/covid12/no_sample/20210317_1617_MC-110352_0_FAP14908_252839db/fastq_pass -i 30 -I 10000 -l 70 -L 10000 -o /home/Sysfate/Team_projects/Covid19/covidInRealTime --ext config.ini > covid.log 2>&1 &
+python3 selectSequencesWithBarcordesLittle.py -c 8 -5 barcode5.tsv -3 barcode3.tsv -g covid.fa --folder fastq_test -n covidTest --ext config.ini > covid.log 2>&1 &
 ```
+In realtime the software give plot with the curents alignment stats and a summary.
+After the end of the software you obtain a summary with the essentials datas.
 
 ## Informations / Authors
 
