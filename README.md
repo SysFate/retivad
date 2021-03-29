@@ -87,7 +87,7 @@ After the end of the software you obtain a summary with the essentials datas.
 
 |         |                                                                                               |
 | ------- | --------------------------------------------------------------------------------------------- |
-| Author  | Francois STUDER ([Github](https://github.com/studyfranco))                                    |
+| Author  | STUDER Francois ([Github](https://github.com/studyfranco))                                    |
 | Author  | Stéfan ([Github](https://github.com/sengelen))                                                |
 | Author  | MENDOZA PARRA Marco ([Github](https://github.com/SysFate))                                    |
 | Team    | [SysFate](https://www.sysfate.org/)                                                           |
