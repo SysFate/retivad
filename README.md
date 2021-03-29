@@ -6,7 +6,7 @@ With the covid pandemic, we want to create a method to detect covid variant with
 In this idea we want combine it to know if the patient are covid positive.
 Illumina sequencing are to expensive, this is why our choise was a Nanopore sequencer: https://nanoporetech.com/
 This sequencer have the capacity to give in realtime the sequenced sequence.
-With the low error rate of the sequencer (2 errors for 24 N), we are able to identify patient and covid variant.
+With the low error rate of the sequencer (2 errors for 24 bp), we are able to identify patient and covid variant.
 
 ## Conda version
 ### Dependencies
