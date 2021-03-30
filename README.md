@@ -104,5 +104,6 @@ For each sequence:
       - Continue if the cDNA and PCR barcode create a good construct.
       - Continue if the insert between the two barcode have a length between limit (insertMinLength,insertMaxLength).
       - Align the insert
+ 
  For each couple of barcode find:
   - Search variation beetween seq
