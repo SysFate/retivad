@@ -83,13 +83,26 @@ In realtime the software give plot with the curents alignment stats and a summar
 If the software don't find new files after 30min, the software initialise the end.
 After the end of the software you obtain a summary with the essentials datas.
 
-## Informations / Authors
+## Authors
 
 |         |                                                                                               |
 | ------- | --------------------------------------------------------------------------------------------- |
 | Author  | STUDER Francois ([Github](https://github.com/studyfranco))                                    |
-| Author  | ENGELEN Stéfan ([Github](https://github.com/sengelen))                                                |
+| Author  | ENGELEN Stéfan ([Github](https://github.com/sengelen))                                        |
 | Author  | MENDOZA PARRA Marco ([Github](https://github.com/SysFate))                                    |
 | Team    | [SysFate](https://www.sysfate.org/)                                                           |
 | Email   | <mmendoza@genoscope.cns.fr>                                                                   |
 
+## How the software work
+For each sequence:
+  - Detect guibsons sequences in the original sequence. We use the lib regex. This library allow in the regexpression a number of errors.
+  - Cut the guibson, and separate each part.
+  - For each part:
+      - Continue if the sequence have length between limit (seqMinLength,seqMaxLength).
+      - Search cDNA barcode. Continue if a unique barcode find.
+      - Search PCR barcode. Continue if a unique barcode find.
+      - Continue if the cDNA and PCR barcode create a good construct.
+      - Continue if the insert between the two barcode have a length between limit (insertMinLength,insertMaxLength).
+      - Align the insert
+ For each couple of barcode find:
+  - Search variation beetween seq
