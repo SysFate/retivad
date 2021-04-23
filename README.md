@@ -56,12 +56,17 @@ optional arguments:
   --alignerSpecialsParam alignerSpecialsParam
                            Specials parameters for the aligner (default: None)
   --traceseq traceseq      Sequences you want track to check the method (default: None)
+  --realtime               Put the software in realtime annalyse (default: False)
   --ext ext                Path to the configuration for the ssh. Use it if your files are not in the computer.
-                           This method are only in realtime annalyse. (default: None)
+                           This method are only in realtime annalyse and regenerate realtime. (default: None)
   --timecheck timecheck    In realtime annalyse, you can setup the time between each check in the folder (default: 10)
   --timeEndCheck timeEndCheck
                            A realtime annalyse, set up the time between the last good check and the stop of the software (default: 30)
   --dev                    Keep all temporar datas (default: False)
+  --regeneraterealtime     Regenerate real time annalyse from fastq file time indication (default: False)
+  --mincov mincov          Minimum coverage to support a variation (default: 20)
+  -v visugenome, --visugenome visugenome
+                           Path to genome use for visualisation in realtime. This option are more if you want check interest region. (default: None)
   ```
 
 #### Example
@@ -73,9 +78,9 @@ Take files from the template folder:
 - fastq_test sequences extract from the patient. (The sample come from synthetic DNA, not from real patient !)
 
 ##### Send the folder fastq_test in the external computer.
-##### Use this command to launch the software:
+##### Use this command to launch the software and generate a realtime experiment:
 ```
-python3 selectSequencesWithBarcordesLittle.py -c 8 -5 barcode5.tsv -3 barcode3.tsv -g covid.fa --folder fastq_test -n covidTest --ext configSSH.ini > covid.log 2>&1 &
+python3 selectSequencesWithBarcordesLittle.py -c 8 -5 barcode5.tsv -3 barcode3.tsv -g covid.fa --folder fastq_test -n covidTest --ext configSSH.ini --regeneraterealtime > covid.log 2>&1 &
 ```
 ##### Move the file in fasq_test/inTime in the fastq_test folder
 ##### Wait and see
