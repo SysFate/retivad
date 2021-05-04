@@ -1,4 +1,4 @@
-# retivade
+# RETIVADE
 A RealTime Variant Detector software.
 
 ## Description
