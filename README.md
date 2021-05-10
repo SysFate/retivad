@@ -60,12 +60,12 @@ optional arguments:
                            This method are only in realtime and regeneraterealtime option are activated. (default: None)
   --timecheck timecheck    In realtime analysis, you can setup the time(m) interval between each check in the folder (default: 10)
   --timeEndCheck timeEndCheck
-                           In realtime analysis, set up the time(m) between the last data collection and the end of the computation due to the absence of new files to process (default: 30)
+                           In realtime analysis, set up the time(m) between the last data collection and the end of the computation due to the absence of new files to process (default: 40)
   --dev                    Keep all temporary datas (default: False)
-  --regeneraterealtime     Mimic real time analysis from all fastq files based on the information concerning the date and time of writing (default: False)
+  --regeneraterealtime     Mimic realtime analysis from all fastq files based on the information concerning the date and time of writing (default: False)
   --mincov mincov          Minimum coverage to support a variation (default: 20)
   -v visugenome, --visugenome visugenome
-                           Path to genome used for visualization in real-time. This option is relevant for cases in which the visualization is focused on a given region of interes (instead of the whole genome). (default: None)
+                           Path to genome used for visualization in realtime. This option is relevant for cases in which the visualization is focused on a given region of interes (instead of the whole genome). (default: None)
   ```
 
 #### Example
