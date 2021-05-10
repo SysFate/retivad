@@ -70,16 +70,17 @@ optional arguments:
 
 #### Example
 In this example we have a sequencing run taking place on a external device (eg: mk1-c), and we want analyze the data in real-time.
-Take files from the template folder:
+Take files from the template folder and the [sampleFiles](https://drive.google.com/file/d/1bDKZZvL6tbHQjnaILUaFdjGU_2jCxktY/view?usp=sharing):
 - Barcodes datas files: barcode5.tsv (cDNA barcodes) and barcode3.tsv (PCR Barcodes).
 - The pathogen genome of your interest. Here we select the Covid19 genome.
 - The configSSH file is used when the fastq files are not in your computer. (Work only in real-time analysis)
-- fastq_test sequences extract from candidates. (Herein, samples correspond to synthetic Covid-19 RNA material, not from real candidates!)
+- sampleFiles sequences extract from candidates. (Herein, samples correspond to synthetic Covid-19 RNA material, not from real candidates!) Decompress files in a folder named retivad_fastq_test.
 
-##### Send the folder fastq_test in the external computer.
+##### Send the folder retivad_fastq_test in the external computer with a rsync or decompress the archive in the remote computer (to keep the modification date)
+##### Configure configSSH.ini
 ##### Use this command to launch the software and generate a realtime experiment:
 ```
-python3 retivad.py -c 8 -5 barcode5.tsv -3 barcode3.tsv -g covid.fa --folder fastq_test -n covidTest --ext configSSH.ini --regeneraterealtime > covid.log 2>&1 &
+python3 retivad.py -c 8 -5 barcode5.tsv -3 barcode3.tsv -g covid.fa --folder path/to/retivad_fastq_test -n covidTest --ext configSSH.ini --regeneraterealtime > covid.log 2>&1 &
 ```
 ##### Move the file in fasq_test/inTime in the fastq_test folder
 ##### Wait and see
