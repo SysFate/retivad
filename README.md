@@ -78,9 +78,10 @@ Take files from the template folder and the [sampleFiles](https://drive.google.c
 
 ##### Send the folder retivad_fastq_test in the external computer with a rsync or decompress the archive in the remote computer (to keep the modification date)
 ##### Configure configSSH.ini
+##### Create genomes index with bwa: bwa index covid19.fa / bwa index covid19InterestRegion.fa
 ##### Use this command to launch the software and generate a realtime experiment:
 ```
-python3 retivad.py -c 8 -5 barcode5.tsv -3 barcode3.tsv -g covid.fa --folder path/to/retivad_fastq_test -n covidTest --ext configSSH.ini --regeneraterealtime > covid.log 2>&1 &
+python3 retivad.py -c 8 -5 barcode5.tsv -3 barcode3.tsv -g covid19.fa -v covid19InterestRegion.fa --folder path/to/retivad_fastq_test -n covidTest --ext configSSH.ini --regeneraterealtime > covid.log 2>&1 &
 ```
 ##### Move the file in fasq_test/inTime in the fastq_test folder
 ##### Wait and see
