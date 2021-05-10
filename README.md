@@ -79,7 +79,7 @@ Take files from the template folder:
 ##### Send the folder fastq_test in the external computer.
 ##### Use this command to launch the software and generate a realtime experiment:
 ```
-python3 selectSequencesWithBarcordesLittle.py -c 8 -5 barcode5.tsv -3 barcode3.tsv -g covid.fa --folder fastq_test -n covidTest --ext configSSH.ini --regeneraterealtime > covid.log 2>&1 &
+python3 retivad.py -c 8 -5 barcode5.tsv -3 barcode3.tsv -g covid.fa --folder fastq_test -n covidTest --ext configSSH.ini --regeneraterealtime > covid.log 2>&1 &
 ```
 ##### Move the file in fasq_test/inTime in the fastq_test folder
 ##### Wait and see
