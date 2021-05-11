@@ -35,8 +35,8 @@ optional arguments:
   -c core, --core core     Number of cores allocated to the software (default: 1)
   -o outdir, --out outdir  Folder in which the output is saved (default: .)
   -n name, --name name     Name of the assay. By default, the software uses the date. (default: None)
-  -G guibsonE, --guibsonE errors
-                           Guibson error accepted (default: 4)
+  -G gibsonE, --gibsonE errors
+                           Gibson error accepted (default: 4)
   -B barcodeE, --barcodeE errors
                            Barcode error accepted (default: 4)
   -i insertMinLength, --insertMinLength insertMinLength
@@ -44,9 +44,9 @@ optional arguments:
   -I insertMaxLength, --insertMaxLength insertMaxLength
                            Good insert maximum length (default: 10000)
   -l seqMinLength, --seqMinLength seqMinLength
-                           Good sequences minimum length between guibson sequences (default: 70)
+                           Good sequences minimum length between gibson sequences (default: 70)
   -L seqMaxLength, --seqMaxLength seqMaxLength
-                           Good sequences maximum length between guibson sequences (default: 10000)
+                           Good sequences maximum length between gibson sequences (default: 10000)
   --noreverse3             If you send directly the reverse complement in 3' barcodes, activate this option (default: False)
   -a aligner, --aligner aligner
                            Aligner name (default: bwa)
@@ -97,10 +97,10 @@ If RETIVAD does not find new files after 40min, the software ends de loop of dat
 | Team    | [SysFate](https://www.sysfate.org/)                                                           |
 | Email   | <mmendoza@genoscope.cns.fr>                                                                   |
 
-## How the software work
+## How the software works
 For each sequence:
-  - RETIVAD searches for guibson sequences with a regex query. This library allows to define the number of errors to be accepted within the regexpression.
-  - Remove the guibson sequence and process each of the side sequences as following:
+  - RETIVAD searches for gibson sequences with a regex query. This library allows to define the number of errors to be accepted within the regexpression.
+  - Remove the gibson sequence and process each of the side sequences as following:
       - Verify if the size of the sequences are within the defined limits (seqMinLength,seqMaxLength). If it is not the case, classify the sequence fragment as either “too short” or “too long”.
       - In case the length of the sequence is within the expected interval, RETIVAD screens for the cDNA barcodes. In case a unique barcode sequence is retrieved the processing moves to the next step; otherwise it classifies the sequence as “multiple” or “no cDNA sequence found”.
       - Search PCR barcode. In case a unique barcode sequence is retrieved the processing moves to the next step; otherwise it classifies the sequence as “multiple” or “no PCR sequence found”.
