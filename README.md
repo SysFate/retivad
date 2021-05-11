@@ -35,9 +35,9 @@ optional arguments:
   -c core, --core core     Number of cores allocated to the software (default: 1)
   -o outdir, --out outdir  Folder in which the output is saved (default: .)
   -n name, --name name     Name of the assay. By default, the software uses the date. (default: None)
-  -G guibsonE, --guibsonE guibsonE
+  -G guibsonE, --guibsonE errors
                            Guibson error accepted (default: 4)
-  -B barcodeE, --barcodeE barcodeE
+  -B barcodeE, --barcodeE errors
                            Barcode error accepted (default: 4)
   -i insertMinLength, --insertMinLength insertMinLength
                            Good insert minimum length (default: 30)
@@ -65,7 +65,7 @@ optional arguments:
   --regeneraterealtime     Mimic realtime analysis from all fastq files based on the information concerning the date and time of writing (default: False)
   --mincov mincov          Minimum coverage to support a variation (default: 20)
   -v visugenome, --visugenome visugenome
-                           Path to genome used for visualization in realtime. This option is relevant for cases in which the visualization is focused on a given region of interes (instead of the whole genome). (default: None)
+                           Path to genome used for visualization in realtime. This option is relevant for cases in which the visualization is focused on a given region of interest (instead of the whole genome) (default: None)
   ```
 
 #### Example
@@ -74,19 +74,18 @@ Take files from the template folder and the [sampleFiles](https://drive.google.c
 - Barcodes datas files: barcode5.tsv (cDNA barcodes) and barcode3.tsv (PCR Barcodes).
 - The pathogen genome of your interest. Here we select the Covid19 genome.
 - The configSSH file is used when the fastq files are not in your computer. (Work only in real-time analysis)
-- sampleFiles sequences extract from candidates. (Herein, samples correspond to synthetic Covid-19 RNA material, not from real candidates!) Decompress files in a folder named retivad_fastq_test.
+- [sampleFiles](https://drive.google.com/file/d/1bDKZZvL6tbHQjnaILUaFdjGU_2jCxktY/view?usp=sharing) sequences extract from candidates. (Herein, samples correspond to synthetic Covid-19 RNA material, not from real candidates!) Decompress files in a folder named retivad_fastq_test.
 
-##### Send the folder retivad_fastq_test in the external computer with a rsync or decompress the archive in the remote computer (to keep the modification date)
-##### Configure configSSH.ini
-##### Create genomes index with bwa: bwa index covid19.fa / bwa index covid19InterestRegion.fa
-##### Use this command to launch the software and generate a realtime experiment:
+###### Send the folder retivad_fastq_test in the external computer with a rsync or decompress the archive in the remote computer (to keep the modification date)
+###### Configure configSSH.ini
+###### Create genomes index with bwa: bwa index covid19.fa / bwa index covid19InterestRegion.fa
+###### Use this command to launch the software and generate a realtime experiment:
 ```
-python3 retivad.py -c 8 -5 barcode5.tsv -3 barcode3.tsv -g covid19.fa -v covid19InterestRegion.fa --folder path/to/retivad_fastq_test -n covidTest --ext configSSH.ini --regeneraterealtime > covid.log 2>&1 &
+python3 retivad.py -c 8 -5 template/barcode5.tsv -3 template/barcode3.tsv -g template/covid19.fa -v template/covid19InterestRegion.fa --folder path/to/retivad_fastq_test -n covidTest --ext configSSH.ini --regeneraterealtime > covid.log 2>&1 &
 ```
-##### Move the file in fasq_test/inTime in the fastq_test folder
 ##### Wait and see
 In real-time the software produces a plot displaying the number of aligned reads (corresponding to the defined target sequence) relative to the time (in hours); as well as further other stats and a summary.
-If RETIVAD does not find new files after 30min, the software ends de loop of data collection. Finally, RETIVAD generates a global summary.
+If RETIVAD does not find new files after 40min, the software ends de loop of data collection. Finally, RETIVAD generates a global summary.
 
 ## Authors
 
