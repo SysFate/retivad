@@ -15,7 +15,7 @@ conda create --name retivade paramiko medaka minimap2 regex bwa samtools bedtool
 conda activate retivade
 ```
 
-### How run
+### How to run
 
 ```
 require arguments:
